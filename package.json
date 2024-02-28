@@ -1,0 +1,23 @@
+{
+  "dependencies": {
+    "http-server": "^14.1.1"
+  },
+  "name": "package",
+  "description": "Pruebas de compilador de TS",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Alcalixo/compilador-ts.git"
+  },
+  "author": "Alcalixo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Alcalixo/compilador-ts/issues"
+  },
+  "homepage": "https://github.com/Alcalixo/compilador-ts#readme"
+}
