@@ -16,23 +16,23 @@ let ivaProducto = 10.5;
 let estadoProducto = true;
 /*void*/
 function mensajeUsuario() {
-    console.log("Este es un mensaje para tí, usuario");
+  console.log("Este es un mensaje para tí, usuario");
 }
 /*enum*/
 var color;
 (function (color) {
-    color[color["Blanco"] = 0] = "Blanco";
-    color[color["Rojo"] = 1] = "Rojo";
-    color[color["Azul"] = 2] = "Azul";
-    color[color["Amarillo"] = 3] = "Amarillo";
+  color[(color["Blanco"] = 0)] = "Blanco";
+  color[(color["Rojo"] = 1)] = "Rojo";
+  color[(color["Azul"] = 2)] = "Azul";
+  color[(color["Amarillo"] = 3)] = "Amarillo";
 })(color || (color = {}));
 let colorAuto = color.Azul;
 console.log(colorAuto);
 var contratos;
 (function (contratos) {
-    contratos[contratos["Permanente"] = 0] = "Permanente";
-    contratos[contratos["Parcial"] = 1] = "Parcial";
-    contratos[contratos["Prueba"] = 2] = "Prueba";
+  contratos[(contratos["Permanente"] = 0)] = "Permanente";
+  contratos[(contratos["Parcial"] = 1)] = "Parcial";
+  contratos[(contratos["Prueba"] = 2)] = "Prueba";
 })(contratos || (contratos = {}));
 let estadoContrato = contratos.Parcial;
 console.log(estadoContrato);
