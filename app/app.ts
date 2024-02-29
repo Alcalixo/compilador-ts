@@ -34,11 +34,47 @@ enum color {
 let colorAuto: color = color.Azul;
 console.log(colorAuto);
 
-enum contratos{
-    Permanente,
-    Parcial,
-    Prueba
+enum contratos {
+  Permanente,
+  Parcial,
+  Prueba,
 }
 
-let estadoContrato:contratos=contratos.Parcial;
+let estadoContrato: contratos = contratos.Parcial;
 console.log(estadoContrato);
+
+/*objetos*/
+/*Arreglos/array*/
+let list: string[] = ["pimiento", "papas", "tomate"];
+let rocosos: boolean[] = [true, false, true];
+let perdidos: any[] = [9, true, "asteroide"];
+let diametro: [string, number] = ["saturno", 116460];
+
+/*Genéricos/generics*/
+/*Si necesitamos que una función reciba mas de un tipo de variable, pero no cualquier tipo (any) podemos usar genèricos
+estos obligan al compilador a respetar el tipo de dato de entrada y de salida (argumento/retorno) */
+function identity<T>(arg: T): T {
+  return arg;
+}
+
+/**object; engloba la mayoría de tipos no primitivos */
+let persona: object = { nombre: "Ana", edad: 28 };
+
+/**Desestructuración: nos permite acceder a los valores de un array o un object */
+var obj = { a: 1, b: 2, c: 3 };
+console.log(obj.c);
+/**Retorno esperado : 3 */
+var array = [1, 2, 3];
+console.log(array[2]);
+/**Retorno esperado : 3 */
+
+/**Desestructuración con Estructuración */
+var array2 = [1, 2, 3, 4, 5];
+var [x, y, ...rest] = array2;
+console.log(array2);
+/**Retorno esperado : [4,5] */
+
+/**Estructuración, permite a una variable array recibir muchos parámetros */
+function rest2(first: number, second: number, ...allOthers: number[]) {
+  console.log(allOthers);
+}

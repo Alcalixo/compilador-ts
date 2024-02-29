@@ -16,23 +16,53 @@ let ivaProducto = 10.5;
 let estadoProducto = true;
 /*void*/
 function mensajeUsuario() {
-  console.log("Este es un mensaje para tí, usuario");
+    console.log("Este es un mensaje para tí, usuario");
 }
 /*enum*/
 var color;
 (function (color) {
-  color[(color["Blanco"] = 0)] = "Blanco";
-  color[(color["Rojo"] = 1)] = "Rojo";
-  color[(color["Azul"] = 2)] = "Azul";
-  color[(color["Amarillo"] = 3)] = "Amarillo";
+    color[color["Blanco"] = 0] = "Blanco";
+    color[color["Rojo"] = 1] = "Rojo";
+    color[color["Azul"] = 2] = "Azul";
+    color[color["Amarillo"] = 3] = "Amarillo";
 })(color || (color = {}));
 let colorAuto = color.Azul;
 console.log(colorAuto);
 var contratos;
 (function (contratos) {
-  contratos[(contratos["Permanente"] = 0)] = "Permanente";
-  contratos[(contratos["Parcial"] = 1)] = "Parcial";
-  contratos[(contratos["Prueba"] = 2)] = "Prueba";
+    contratos[contratos["Permanente"] = 0] = "Permanente";
+    contratos[contratos["Parcial"] = 1] = "Parcial";
+    contratos[contratos["Prueba"] = 2] = "Prueba";
 })(contratos || (contratos = {}));
 let estadoContrato = contratos.Parcial;
 console.log(estadoContrato);
+/*objetos*/
+/*Arreglos/array*/
+let list = ["pimiento", "papas", "tomate"];
+let rocosos = [true, false, true];
+let perdidos = [9, true, "asteroide"];
+let diametro = ["saturno", 116460];
+/*Genéricos/generics*/
+/*Si necesitamos que una función reciba mas de un tipo de variable, pero no cualquier tipo (any) podemos usar genèricos
+estos obligan al compilador a respetar el tipo de dato de entrada y de salida (argumento/retorno) */
+function identity(arg) {
+    return arg;
+}
+/**object; engloba la mayoría de tipos no primitivos */
+let persona = { nombre: "Ana", edad: 28 };
+/**Desestructuración: nos permite acceder a los valores de un array o un object */
+var obj = { a: 1, b: 2, c: 3 };
+console.log(obj.c);
+/**Retorno esperado : 3 */
+var array = [1, 2, 3];
+console.log(array[2]);
+/**Retorno esperado : 3 */
+/**Desestructuración con Estructuración */
+var array2 = [1, 2, 3, 4, 5];
+var [x, y, ...rest] = array2;
+console.log(array2);
+/**Retorno esperado : [4,5] */
+/**Estructuración, permite a una variable array recibir muchos parámetros */
+function rest2(first, second, ...allOthers) {
+    console.log(allOthers);
+}
