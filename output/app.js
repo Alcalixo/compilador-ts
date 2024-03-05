@@ -66,3 +66,24 @@ console.log(array2);
 function rest2(first, second, ...allOthers) {
     console.log(allOthers);
 }
+rest2(1, 2, 3, 4, 5);
+/**Retorno esperado : 3, 4, 5 */
+/**Aserción de Tipo */
+let username;
+username = "Alcalixo";
+let message2 = username.length > 5
+    ? `Welcome ${username}`
+    : `username is too short`;
+console.log("Message ->", message2);
+/**Funciones */
+/*function calcularIva(productos: Producto[]): [number, number] {
+  let total = 0;
+  productos.forEach(({ precio }) => {
+    total += precio;
+  });
+  return [total, total * 0.21];
+}
+
+class Producto {
+  precio: number;
+}*/
